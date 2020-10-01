@@ -1,0 +1,51 @@
+:root {
+  --color-bodyColor: #ffffff;
+  --color-h-color: #212529;
+  --color-p-color: #212529;
+  --color-cardColor: #ffffff;
+  --color-lightToDark: #efecff;
+  --color-softShadow: rgba(255, 255, 255, 0.7);
+  --theme: 'light'
+}
+@media (prefers-color-scheme:dark) {
+  :root {
+    --color-bodyColor: #141414;
+    --color-h-color: #f0f0f0;
+    --color-p-color: #eaeaea;
+    --color-cardColor: #36393f;
+    --color-lightToDark: #36393f;
+    --color-softShadow: rgba(0, 0, 0, 0.1);
+    --theme: 'dark'
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff
+}
+.block {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 350px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #23ee77;
+  border-radius: 7px;
+  font-family: monospace;
+  color: #fff
+}
+.block:hover {
+  background: #584ce7
+}
