@@ -23,7 +23,7 @@
 
 				<!-- heading -->
 				<h3 class="sectionHeading">
-					Оставьте комменнтарий
+					йоооу
 				</h3>
 				<!-- /heading -->
 				
