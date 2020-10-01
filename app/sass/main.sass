@@ -1,0 +1,33 @@
+// ================================
+// =======> main.sass  <===========
+// ================================
+
+
+// ====== theme color  ====== //
+@import 'colorThemes/purpleThemeColor'
+
+// ====== styles imports ====== //
+
+
+	
+body
+	margin: 0
+	padding: 0
+	background: $bodyColor
+
+.block
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	width: 350px
+	height: 150px
+	display: flex
+	align-items: center
+	justify-content: center
+	background: $green
+	border-radius: 7px
+	font-family: monospace
+	color: $white
+	&:hover
+		background: $primary-dark
