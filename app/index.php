@@ -1,4 +1,4 @@
-<?php include_once "bd.php";?>
+<?php include_once "phpfiles/bd.php";?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/style.css">
 
     <title>Form</title>
   </head>
@@ -82,7 +82,7 @@
 					<!-- форма -->
 					<div class="col-lg-7">
 
-						<form action="formhandler.php" method="post">
+						<form action="phpfiles/formhandler.php" method="post">
 							<input type="text" name="name" placeholder="Ваше Имя">
 							<textarea name="content" placeholder="Ваше Сообщение"></textarea>
 							<button type="submit" name="submit" class="btn btn-primary btn-lg mt-3">Отправить</button>
