@@ -33,10 +33,11 @@
 				<div class="col-lg-7">
 
 					<?php 
-						$sql = 'SELECT * FROM `comments`';
+						$sql = 'SELECT * FROM comments ORDER BY comment_id DESC';
 						$statement = $conn -> query($sql);
 						$comments = $statement -> fetchAll(PDO::FETCH_ASSOC);
 						foreach($comments as $comment){						 
+<<<<<<< HEAD
 						?>
 					<!-- это верстка одного коммента -->
 					<div class="commentBox">
@@ -46,6 +47,29 @@
 
 							<div class="commentBox__img">
 								<img src="https://www.flaticon.com/svg/static/icons/svg/3532/3532852.svg" alt="img">
+=======
+						?>		
+													 
+						<!-- это верстка одного коммента -->
+						<div class="commentBox">
+
+							<div class="commentBox-wrapper">
+									<!-- <button class="commentBox__reply">reply</button> -->
+
+								<div class="commentBox__img">
+									<img src="https://www.flaticon.com/svg/static/icons/svg/3532/3532852.svg" alt="img">
+								</div>
+
+								<div class="commentBox__content">
+									<h5 class="commentBox__content__name"><?php echo $comment['name'] ?></h5> 
+									<!-- < ?= ?> -->
+									<span class="commentBox__content__date"><?=$comment['date']?></span>
+
+									<p class="commentBox__content__message">
+										<?=$comment['content']?>
+									</p>
+								</div>
+>>>>>>> 84467e9e65327e3fd399dd5c3e373cd6b2c95df2
 							</div>
 
 							<div class="commentBox__content">
