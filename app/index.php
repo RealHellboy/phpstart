@@ -32,11 +32,12 @@
 					<div class="col-lg-7">
 
 					<?php 
-						$sql = 'SELECT * FROM `comments`';
+						$sql = 'SELECT * FROM comments ORDER BY comment_id DESC';
 						$statement = $conn -> query($sql);
 						$comments = $statement -> fetchAll(PDO::FETCH_ASSOC);
 						foreach($comments as $comment){						 
-						?>									 
+						?>		
+													 
 						<!-- это верстка одного коммента -->
 						<div class="commentBox">
 
