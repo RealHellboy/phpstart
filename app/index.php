@@ -1,4 +1,6 @@
-<?php include_once "phpfiles/bd.php";?>
+<?php
+session_start();
+include_once "phpfiles/bd.php";?>
 <!doctype html>
 <html lang="en">
 
@@ -77,12 +79,13 @@
 		
 
 		
-
+<?php if(isset($_SESSION['notification'])):?>
 			<!-- код одного алерта -->
 			<div class="alert alert-success mb-3" role="alert">
-				Сообщение доставлено успешно!!! <i class="fas fa-times"></i>
-				</button>
+				<?=$_SESSION['notification']?> <i class="fas fa-times"></i>
 			</div>
+		<?php endif; ?>	
+	  <?php unset($_SESSION['notification']); ?>
 			<!-- /код одного алерта -->
 
 		

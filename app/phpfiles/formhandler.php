@@ -1,5 +1,7 @@
 <?php
 //  header('Location: index.php');
+session_start();
+
 
 include_once "bd.php";
 
@@ -12,7 +14,8 @@ include_once "bd.php";
 	$query = "INSERT INTO comments VALUES(NULL,:name,:content,NOW() )";
 	$msg = $conn -> prepare($query);
 	$msg -> execute(['name' => $name,'content' => $content]);
-	
+
+	$_SESSION['notification'] = 'Ваше сообщение успешно доставленно';
 	echo "<script>location.href='../index.php';</script>";
 	}
 
